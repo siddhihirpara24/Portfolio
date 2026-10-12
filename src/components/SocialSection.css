@@ -1,0 +1,118 @@
+.social-section {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, #0d0f15 50%, var(--bg-primary) 100%);
+}
+
+.social-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.social-profile-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  text-decoration: none;
+  background: #12151d;
+  border-radius: 18px;
+  transition: all var(--transition-base);
+}
+
+.social-profile-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(139, 124, 255, 0.15);
+}
+
+.soc-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.soc-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soc-icon-github {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.soc-icon-linkedin {
+  background: rgba(10, 102, 194, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(10, 102, 194, 0.3);
+}
+
+.soc-arrow-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.social-profile-card:hover .soc-arrow-badge {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translate(3px, -3px);
+}
+
+.soc-domain {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-light);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.soc-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.soc-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.soc-card-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-color);
+}
+
+.soc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+  .social-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
